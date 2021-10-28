@@ -7,6 +7,14 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+function vowels(str) {
+
+    let regex = /[aeiouAEIOU]/g
+
+    let strLengthNoVowels = str.replace(regex, '').length
+
+    return str.length - strLengthNoVowels
+
+}
 
 module.exports = vowels;
