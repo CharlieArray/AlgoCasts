@@ -12,13 +12,13 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {
+function fizzBuzz(n){
 
     for(let i = 1; i <= n; i++){
         if(i % 15 == 0){
             console.log('fizzbuzz')
         }
-        
+
         else if(i % 3 == 0){
             console.log('fizz')
         }
@@ -28,16 +28,7 @@ function fizzBuzz(n) {
         }
 
         else console.log(i)
-
     }
-
-    //console log numbers from 1 to n
-
-    //multiples of 3 => print "fuzz"
-
-    //multiples of 5 => print "buzz"
-
-    //multiples of both => print "fizzbuzz"
 }
 
 module.exports = fizzBuzz;

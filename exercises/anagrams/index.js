@@ -9,12 +9,15 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-        let removeNonChars = /^A-Za-z/
-        
-        stringAmodified = stringA.replace(removeNonChars,'').toLowerCase().split('').sort().join('');
-        stringBmodified = stringB.replace(removeNonChars,'').toLowerCase().split('').sort().join('');
 
-    return stringAmodified == stringBmodified ? true : false
+    //regex of everything but A-Z a-z
+    let regex = /[^A-Za-z]/
+
+    let stringAfinal= stringA.replace(regex, '').split('').sort().join('');
+    let stringBfinal = stringB.replace(regex, '').split('').sort().join('');
+    
+    //ternary operator 
+     return stringAfinal == stringBfinal ? true: false
 }
 
 module.exports = anagrams;
