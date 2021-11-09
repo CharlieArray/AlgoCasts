@@ -8,13 +8,7 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-    //split the string into arr by the space
-       let strArr = str.split(' ');
-    //loop through each index position, and capitalize arr[0] toUpperCase() and include substring of second part of string in each index
-       strArr.forEach((element,index,strArr)=>{
-        strArr[index] = `${element.toUpperCase()[0]}${element.substring(1,)}`
-       })
-   return strArr.join(' ')
+
 }
 
 module.exports = capitalize;
