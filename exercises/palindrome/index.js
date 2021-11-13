@@ -11,7 +11,6 @@ function palindrome(str) {
     //return true if the string is a palindrome/return false if not a palindrome
 
     //strings that form same word if reversed
-    
 }
 
 module.exports = palindrome;
