@@ -8,7 +8,9 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-    
+    //split each word by " "
+    //iterate through each index and capitalize first letter
+    //join the array back into a string
 }
 
 module.exports = capitalize;
