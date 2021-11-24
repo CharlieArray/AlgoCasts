@@ -5,12 +5,17 @@
 // and punctuation in determining if the string is a palindrome.
 // --- Examples:
 //   palindrome("abba") === true
-//   palindrome("abcdefg") === false
+//   palindrome("charlie") === false
 
 function palindrome(str) {
-    //return true if the string is a palindrome/return false if not a palindrome
+  let reversed = ''
 
-    //strings that form same word if reversed
+  for(let char of str){
+      reversed = char + reversed;
+  }
+
+return reversed === str ? true : false;
+
 }
 
 module.exports = palindrome;
