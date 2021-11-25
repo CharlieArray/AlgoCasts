@@ -8,19 +8,19 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {
+class Queue{
+
     constructor(){
-        this.data = []
+        this.data = [];
     }
 
-    //add method
-    add(record){
-        this.data.unshift(record);
-    }
+     add(item){
+      this.data.unshift(item)
+    }    
 
-    //remove method
+
     remove(){
-        return this.data.pop()
+      return this.data.pop()
     }
 }
 
