@@ -21,3 +21,16 @@ test('ReverseInt flips a negative number', () => {
   expect(reverseInt(-90)).toEqual(-9);
   expect(reverseInt(-2359)).toEqual(-9532);
 });
+
+
+/*
+  function reverseInt(n) {
+        if(n === 0) return 0;
+       
+        let nValue = Math.abs(n); 
+
+        return n < 0  ? nValue.toString().split('').reverse().join('') * -1 : nValue.toString().split('').reverse().join('') * 1 
+
+}
+
+*/
