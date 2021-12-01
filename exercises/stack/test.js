@@ -34,3 +34,42 @@ test('peek returns the first element but doesnt pop it', () => {
   expect(s.peek()).toEqual(1);
   expect(s.pop()).toEqual(1);
 });
+
+
+/*
+      //stack == FILO
+    //[first, second, third, fourth] bottom <=> top
+
+    constructor() {
+        this.data = [];
+    }
+        
+
+    //push() method to add at end of arr
+    push(item){
+        this.data.push(item);
+    }
+
+
+    //pop() method to remove from end of arr
+    pop(){
+        return this.data.pop();
+    }
+
+
+    //peek method to see whats on top of stack
+    peek(){
+        return this.data[this.data.length - 1]
+    }
+
+}
+
+let s = new Stack()
+
+s.push("first")
+s.push("second")
+s.push('third')
+s.peek() // should return 'third'
+s.pop() //should remove 'third'
+s.peek()
+*/

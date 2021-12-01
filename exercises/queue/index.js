@@ -9,37 +9,37 @@
 //     q.remove(); // returns 1;
 
 class Queue{
-  //queue is first in first out; like a McDonalds drive thru
-    //2 is first el, 4 is second el, 6 is third el
-    //[6,4,2]
-    //unshift() => append to 0 index
-    //pop() => remove from last index
+  //Queue is first in first out
+  //[first]
+  //[second, first]
+  //[third, second, first]
+    //new el appended to 0 index of arr
+    //removal of element is last element
 
   //need a constructor class
-    constructor(){
-      this.data = [];
-    }
+  constructor(){
+    this.data = [];
+  }
 
-  //need an add method
-    add(item){
-      this.data.unshift(item);
-    }
+  //add method
+  add(el){
+    this.data.unshift(el);
+  }
 
-  //need a remove method
-   remove(){
-     return this.data.pop()
-   }
-
+  //remove method
+  remove(){
+    return this.data.pop();
+  }
 }
 
-let q = new Queue();
+let q = new Queue
 
 q.add('first')
 q.add('second')
 q.add('third')
-q.remove()
-q.remove()
+console.log(q, 'should have three elements')
 
-
+q.remove() //should remove 'first'
+console.log(q, 'should remove first')
 
 module.exports = Queue;
