@@ -6,29 +6,17 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-    //str => str array => key/value pairs => items object
-    let items = {};
+   //count values by key:value pairs
 
-    for (let char of str) {
-        if (!items[char]) {
-            items[char] = 1
-        }
-        else items[char]++
-    }
+    //let items = {};
 
-    //find max occurances, and what key has the max occurances
-    //create baseline to compare
-    let maxValue = 0
-    let maxChar = ''
+    //for(let element of str)
+        //if(!items[element])
+            //items[element] = 1 
+        //else items[element]++
+    
+    //
 
-    //iterate through object and 
-    for (let item in items) {
-        if (items[item] > maxValue) {
-            maxValue = items[item]
-            maxChar = item
-        }
-    }
-    return maxChar
 }
 
 module.exports = maxChar;
