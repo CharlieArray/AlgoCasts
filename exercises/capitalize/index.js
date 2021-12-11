@@ -8,9 +8,13 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 function capitalize(str) {
-    //split each word by " "
-    //iterate through each index and capitalize first letter
-    //join the array back into a string
+    let strSplit = str.split(' ');
+
+    let mappedStr = strSplit.map(function (item) {
+        return `${item[0].toUpperCase()}${item.slice(1)}`
+    })
+
+    return mappedStr.join(' ');
 }
 
 module.exports = capitalize;
