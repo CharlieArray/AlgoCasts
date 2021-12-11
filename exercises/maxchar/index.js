@@ -5,31 +5,31 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
+
 function maxChar(str) {
-   //count values by key:value pairs
-    let object = {}
 
-    for(let item of str){
-        if(!object[item]) {
-            object[item] = 1
-            }
-        else object[item]++
+    //create a list with a count for each unique value
+    //ex. {a: 5, b: 3, c: 1, d: 0, 1: 3}
+
+    let list = {}
+
+    for (let char of str) {
+        if (!list[char]) {
+            list[char] = 1
         }
-
-    //object ex = {a: 1, b:1, c: 6}    
+        else list[char]++
+    }
 
     let maxValue = 0;
-    let maxChar = "" 
+    let maxChar = ""
 
-    //find key with largest value 
-        //iterate through object
-        for(let item in object){
-            if(object[item] > maxValue){
-                maxValue = object[item];
-                maxChar = item;
-            }
+    for (let char in list) {
+        if (list[char] >= maxValue) {
+            maxValue = list[char];
+            maxChar = char;
         }
-    return maxChar;
+    }
+    return maxChar
 }
 
 module.exports = maxChar;
