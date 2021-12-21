@@ -10,6 +10,20 @@
 
 function chunk(chunk, size){   
 
+    let chunked = [];
+    //chunked = [[1,2],[3]]
+
+    //iterate through array
+    for(let item of chunk){
+        let last = chunked[chunked.length - 1]
+        console.log(chunked)
+    
+        if(!last || last.length == size){
+            chunked.push([item]);
+        }
+        else last.push(item);
+    }
+    return chunked;
 }
 
 module.exports = chunk;
