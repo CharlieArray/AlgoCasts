@@ -7,29 +7,28 @@
 
 
 function maxChar(str) {
+    //return most commonly used string
+    let object = {};
 
-    //create a list with a count for each unique value
-    //ex. {a: 5, b: 3, c: 1, d: 0, 1: 3}
-
-    let list = {}
-
-    for (let char of str) {
-        if (!list[char]) {
-            list[char] = 1
-        }
-        else list[char]++
+    for(let char of str){
+        if(!object[char]){
+            object[char] = 1;
+            }
+        else object[char]++;
     }
 
-    let maxValue = 0;
-    let maxChar = ""
+        let maxValue = 0;
+        let maxChar = "";
 
-    for (let char in list) {
-        if (list[char] >= maxValue) {
-            maxValue = list[char];
+    for(let char in object){
+        if(object[char] > maxValue){
+            maxValue = object[char];
             maxChar = char;
         }
     }
-    return maxChar
+
+    return maxChar;
+        
 }
 
 module.exports = maxChar;
