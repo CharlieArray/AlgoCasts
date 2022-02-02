@@ -5,30 +5,31 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-
 function maxChar(str) {
-    //return most commonly used string
-    let object = {};
+  //we need to create key:value pairs, with values being occurances
+  //{a:2, b:4, c:6}
 
-    for(let char of str){
-        if(!object[char]){
-            object[char] = 1;
-            }
-        else object[char]++;
+  let object = {};
+
+  //iterate through string
+  for (let char of str) {
+    if (!object[char]) {
+      object[char] = 1;
+    } else object[char]++;
+  }
+
+  //iterate through object to see what is highest
+  let maxItem = "";
+  let maxUsed = 0;
+
+  for (let item in object) {
+    if (object[item] > maxUsed) {
+      maxUsed = object[item];
+      maxItem = item;
     }
+  }
 
-        let maxValue = 0;
-        let maxChar = "";
-
-    for(let char in object){
-        if(object[char] > maxValue){
-            maxValue = object[char];
-            maxChar = char;
-        }
-    }
-
-    return maxChar;
-        
+  return maxItem;
 }
 
 module.exports = maxChar;
