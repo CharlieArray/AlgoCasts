@@ -6,7 +6,7 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-  //we need to create key:value pairs, with values being occurances
+//we need to create key:value pairs, with values being occurances
   //{a:2, b:4, c:6}
 
   let object = {};
@@ -30,6 +30,8 @@ function maxChar(str) {
   }
 
   return maxItem;
+
+
 }
 
 module.exports = maxChar;
